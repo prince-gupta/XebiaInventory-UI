@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Xebia Inventory Tool</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/sideBar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-cookies.js"></script>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-sanitize.min.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.min.js"></script>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-cookies.min.js"></script>-->
+    <script src='../scripts/bower_components/bootstrap/js/modal.js'></script>
+    <script src='../scripts/main.js'></script>
+    <script src='../scripts/waitingDialog.js'></script>
+    <script src='../scripts/controllers/registerController.js'></script>
+    <script src='../scripts/controllers/assetsController.js'></script>
+    <script src='../scripts/controllers/commonController.js'></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default" style="height: 78px;">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"><img src="../images/logo.svg" class="navBar-image"></a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#register"><i></i>Employee Management</a></li>
+                <li><a href="#assets"><i></i>Assets Management</a></li>
+                <li><a href="#approvals"><i></i>Approvals<span class="badge">5</span></a></li>
+            </ul>
+            <span id="menu-toggle" onclick="openSideBar()" class="btn btn-lg toggle" style="color: #777"><i class="glyphicon glyphicon-list"></i></span>
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <span id="menu-close" class="btn btn-lg pull-right toggle" onclick="closeSideBar()" ><i class="glyphicon glyphicon-remove"></i></span>
+                    <li class="sidebar-brand">
+                        <span>Tools</span>
+                    </li>
+                    <li>
+                        <a href="#user">User Management</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div ng-view>
+</div>
+</body>
+</html>
